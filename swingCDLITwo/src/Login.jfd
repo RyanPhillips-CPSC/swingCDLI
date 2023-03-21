@@ -1,0 +1,53 @@
+JFDML JFormDesigner: "8.0.1.0.199" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp label3::t:::x, seq l {space :p:45:p, comp panel1:::p::p, space :28::x}, seq t {space :::x, comp loginButton:::p:120:p, space :p:135:p}}"
+			"$verticalGroup": "par l {seq l {space :p:32:p, comp label3:::p::p, space :p:33:p, comp panel1:::::x, space :p:27:p, comp loginButton:::p:40:p, space :p:35:p}}"
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 400, 400 )
+			"minimumSize": new java.awt.Dimension( 400, 400 )
+			"maximumSize": new java.awt.Dimension( 400, 400 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par t {comp label1:::p::p, comp label2:::p::p}, space s:::p, par l {comp passwordField:::p:220:p, comp usernameField:::p:220:p}, space ::19:x}}"
+				"$verticalGroup": "par l {seq {space :::p, par l {seq t {par b {comp label1::b:p::p, comp usernameField::b:p:50:p}, space :p:79:p}, par b:t {comp passwordField::b:p:50:p, comp label2::b:p::p}}, space :::x}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordField"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "usernameField"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "username"
+					"foreground": sfield java.awt.Color black
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "password"
+					"foreground": sfield java.awt.Color black
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "loginButton"
+				"text": "Sign In"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "CDLI"
+				"font": new java.awt.Font( "Nimbus Sans L", 0, 28 )
+				"foreground": sfield java.awt.Color black
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 155, 95 )
+			"size": new java.awt.Dimension( 400, 360 )
+		} )
+	}
+}
